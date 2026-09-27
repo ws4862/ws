@@ -1,7 +1,225 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <title>ws (beta) (nao funcional ainda)</title>
-  <body>
-    <p>okk, bye!</p>
-  </body>
+<!DOCTYPE PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CYBER-GRID // Central de Aplicativos</title>
+    <style type="text/css">
+        /* Configurações Globais Visuais */
+        body {
+            background-color: #050811;
+            color: #00ffcc;
+            font-family: "Courier New", Courier, monospace;
+            margin: 20px;
+            padding: 0;
+        }
+
+        /* Moldura/Container Principal */
+        #container {
+            width: 760px;
+            margin: 0 auto;
+            border: 2px solid #00ffcc;
+            background-color: #0a0f24;
+            padding: 15px;
+        }
+
+        /* Cabeçalho */
+        #header {
+            text-align: center;
+            border-bottom: 2px dashed #ff0055;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        #header h1 {
+            color: #ff0055;
+            letter-spacing: 4px;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        #header p {
+            color: #88aaff;
+            font-size: 12px;
+            margin: 5px 0 0 0;
+        }
+
+        /* Menu de Navegação/Filtros */
+        #menu {
+            text-align: center;
+            background-color: #001122;
+            padding: 8px;
+            border: 1px solid #005588;
+            margin-bottom: 20px;
+        }
+
+        #menu a {
+            color: #ffff00;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0 15px;
+        }
+
+        #menu a:hover {
+            color: #ff0055;
+            text-decoration: underline;
+        }
+
+        /* Tabela de Produtos/Apps (Estrutura do HTML4) */
+        .app-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .app-table th {
+            background-color: #002244;
+            color: #ffffff;
+            border: 1px solid #00ffcc;
+            padding: 8px;
+            text-align: left;
+            font-size: 12px;
+        }
+
+        .app-table td {
+            border: 1px solid #004466;
+            padding: 10px;
+            vertical-align: top;
+            background-color: #050d1a;
+        }
+
+        /* Detalhes dos Apps */
+        .app-title {
+            font-weight: bold;
+            color: #ff0055;
+            font-size: 16px;
+        }
+
+        .app-version {
+            color: #888888;
+            font-size: 10px;
+        }
+
+        .app-desc {
+            color: #aaccff;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background-color: #00ffcc;
+            color: #000000;
+            padding: 4px 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 11px;
+            border: 1px solid #ffffff;
+        }
+
+        .btn-download:hover {
+            background-color: #ff0055;
+            color: #ffffff;
+        }
+
+        /* Rodapé */
+        #footer {
+            border-top: 1px solid #00ffcc;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 10px;
+            color: #557799;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <!-- CABEÇALHO -->
+        <div id="header">
+            <h1>[ CYBER-GRID STORE v2.0 ]</h1>
+            <p>REDE DE DOWNLOADS NEURAL // PROTOCOLO TLS-COMPAT</p>
+        </div>
+
+        <!-- MENU / CATEGORIAS -->
+        <div id="menu">
+            <a href="#ferramentas">[ FERRAMENTAS ]</a> | 
+            <a href="#multimidia">[ MULTIMÍDIA ]</a> | 
+            <a href="#jogos">[ JOGOS ]</a> | 
+            <a href="#rede">[ REDE ]</a>
+        </div>
+
+        <!-- SEÇÃO 1: FERRAMENTAS -->
+        <h2 id="ferramentas" style="color:#ffff00; font-size:14px;">> APLICATIVOS DE SISTEMA</h2>
+        
+        <table class="app-table" summary="Lista de Ferramentas de Sistema">
+            <tr>
+                <th width="15%">Ícone</th>
+                <th width="65%">Detalhes do Aplicativo</th>
+                <th width="20%">Ação</th>
+            </tr>
+            <tr>
+                <td align="center">
+                    <!-- Substitua pelo caminho do ícone se quiser -->
+                    <span style="font-size: 24px;">[SYS]</span>
+                </td>
+                <td>
+                    <span class="app-title">Quantum Cleaner</span> 
+                    <span class="app-version">v1.0.4</span>
+                    <p class="app-desc">Otimizador de memória para processadores legados. Limpa registros temporários da rede neural.</p>
+                </td>
+                <td align="center">
+                    <br>
+                    <a href="seu_arquivo1.zip" class="btn-download">BAIXAR .ZIP</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <span style="font-size: 24px;">[SEC]</span>
+                </td>
+                <td>
+                    <span class="app-title">Aegis Firewall Pro</span> 
+                    <span class="app-version">v3.2</span>
+                    <p class="app-desc">Proteção contra pacotes maliciosos em redes antigas. Compatível com encriptação legada.</p>
+                </td>
+                <td align="center">
+                    <br>
+                    <a href="seu_arquivo2.zip" class="btn-download">BAIXAR .ZIP</a>
+                </td>
+            </tr>
+        </table>
+
+        <!-- SEÇÃO 2: MULTIMÍDIA -->
+        <h2 id="multimidia" style="color:#ffff00; font-size:14px;">> MULTIMÍDIA & ÁUDIO</h2>
+        
+        <table class="app-table" summary="Lista de Aplicativos de Multimídia">
+            <tr>
+                <th width="15%">Ícone</th>
+                <th width="65%">Detalhes do Aplicativo</th>
+                <th width="20%">Ação</th>
+            </tr>
+            <tr>
+                <td align="center">
+                    <span style="font-size: 24px;">[AMP]</span>
+                </td>
+                <td>
+                    <span class="app-title">Neon Player</span> 
+                    <span class="app-version">v0.9b</span>
+                    <p class="app-desc">Tocador de áudio retrô com suporte a MP3, WAV e áudio de alta compressão.</p>
+                </td>
+                <td align="center">
+                    <br>
+                    <a href="seu_arquivo3.zip" class="btn-download">BAIXAR .ZIP</a>
+                </td>
+            </tr>
+        </table>
+
+        <!-- RODAPÉ -->
+        <div id="footer">
+            <p>CYBER-GRID INC. &copy; 1999-2026 // NENHUM DIREITO RESERVADO // HTML 4.01 STRICT COMPLIANT</p>
+        </div>
+
+    </div>
+
+</body>
 </html>
