@@ -2,370 +2,159 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>GALACTIC DIGITAL HUB // Store</title>
+    <title>GALACTIC APP HUB</title>
     <style type="text/css">
-        /* Estilos Globais e Fundo Futurista */
+        /* ESTILOS GERAIS */
         body {
-            background: #020712 url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1600') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #0b0e14;
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            padding: 30px 10px;
+            padding: 30px;
         }
 
-        /* Painel Transparente/Glassmorphism */
-        #hub-window {
-            width: 880px;
+        /* CONTAINER PRINCIPAL */
+        #container {
+            width: 800px;
             margin: 0 auto;
-            background: rgba(8, 18, 38, 0.75);
-            border: 1px solid rgba(0, 217, 255, 0.4);
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 0 30px rgba(0, 195, 255, 0.2);
         }
 
-        /* Cabeçalho */
-        #header-table {
-            width: 100%;
-            margin-bottom: 25px;
-        }
-
-        .store-tag {
-            color: #8a9bbd;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .main-title {
-            font-size: 26px;
-            font-weight: bold;
-            color: #ffffff;
-            letter-spacing: 2px;
-            text-shadow: 0 0 12px rgba(0, 217, 255, 0.8);
-            margin: 5px 0 0 0;
-        }
-
-        .window-controls {
-            text-align: right;
-            color: #617398;
-            font-family: monospace;
-            font-size: 14px;
-        }
-
-        /* Grade de Cards de Aplicativos */
-        .app-grid {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 15px;
-        }
-
-        .category-title {
-            color: #a5b4fc;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            padding-left: 5px;
-            padding-top: 10px;
-        }
-
-        /* Estilo do Card Holográfico */
-        .app-card {
-            background: rgba(13, 27, 54, 0.6);
-            border: 1px solid rgba(0, 217, 255, 0.25);
-            border-radius: 12px;
-            padding: 12px;
-            vertical-align: top;
-            width: 33%;
-        }
-
-        .app-icon-cell {
-            width: 50px;
-            vertical-align: top;
-        }
-
-        .app-icon {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, #1e1b4b, #0284c7);
-            border-radius: 10px;
-            border: 1px solid #00f0ff;
+        /* CABEÇALHO */
+        #header {
             text-align: center;
-            line-height: 44px;
-            font-size: 20px;
-            box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+            margin-bottom: 30px;
         }
 
-        .app-name {
-            font-size: 13px;
-            font-weight: bold;
+        #header h1 {
+            color: #00d2ff;
+            font-size: 28px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        #header p {
+            color: #7b8b9a;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* CARD DE CADA APLICATIVO */
+        .app-card {
+            background-color: #161b26;
+            border: 1px solid #2a3447;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        /* LOGO DO APP */
+        .app-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            border: 1px solid #00d2ff;
+        }
+
+        /* DETALHES DO APP */
+        .app-title {
             color: #ffffff;
-            letter-spacing: 0.5px;
+            font-size: 18px;
+            font-weight: bold;
         }
 
         .app-cat {
-            font-size: 10px;
-            color: #64748b;
-            margin-bottom: 4px;
-        }
-
-        .app-rating {
-            color: #facc15;
-            font-size: 10px;
+            color: #00d2ff;
+            font-size: 12px;
+            font-weight: bold;
         }
 
         .app-desc {
-            font-size: 11px;
-            color: #94a3b8;
-            margin: 8px 0;
-            line-height: 1.3;
+            color: #9aa8b6;
+            font-size: 13px;
+            margin-top: 5px;
         }
 
-        /* Botão Futurista de Download */
+        /* BOTÃO DE INSTALAÇÃO */
         .btn-install {
-            display: inline-block;
-            background: transparent;
-            color: #00f0ff;
-            border: 1px solid #00f0ff;
-            padding: 5px 12px;
-            border-radius: 20px;
+            background-color: #00d2ff;
+            color: #0b0e14;
+            padding: 8px 20px;
             text-decoration: none;
-            font-size: 10px;
             font-weight: bold;
-            letter-spacing: 1px;
+            font-size: 13px;
+            border-radius: 5px;
+            display: inline-block;
         }
 
         .btn-install:hover {
-            background: #00f0ff;
-            color: #030712;
-            box-shadow: 0 0 12px #00f0ff;
-        }
-
-        /* Barra Inferior de Navegação */
-        #dock-table {
-            width: 100%;
-            margin-top: 20px;
-            background: rgba(4, 12, 28, 0.8);
-            border: 1px solid rgba(0, 217, 255, 0.2);
-            border-radius: 30px;
-            padding: 8px 20px;
-        }
-
-        .user-profile {
-            font-size: 12px;
-            color: #38bdf8;
-        }
-
-        .dock-icons {
-            text-align: center;
-        }
-
-        .dock-btn {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 14px;
-            margin: 0 8px;
-            padding: 5px 8px;
-        }
-
-        .dock-btn:hover {
-            color: #00f0ff;
+            background-color: #00a8cc;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
 
-    <div id="hub-window">
+    <div id="container">
 
-        <!-- CABEÇALHO DA JANELA -->
-        <table id="header-table" cellpadding="0" cellspacing="0" border="0">
+        <!-- CABEÇALHO DA LOJA -->
+        <div id="header">
+            <h1>GALACTIC DIGITAL HUB</h1>
+            <p>CENTRAL DE APLICATIVOS FUTURISTA</p>
+        </div>
+
+
+        <!-- ======================================================== -->
+        <!-- INÍCIO DO APP 1 (Para remover este app, apague até aqui) -->
+        <!-- ======================================================== -->
+        <table class="app-card" cellSpacing="0" cellPadding="0">
             <tr>
-                <td>
-                    <div class="store-tag">APP STORE HUB</div>
-                    <div class="main-title">GALACTIC DIGITAL HUB</div>
+                <!-- 1. LOGO DO APP -->
+                <td width="80" align="center" valign="middle">
+                    <img src="https://via.placeholder.com/64/00d2ff/000000?text=NAV" class="app-logo" alt="Logo">
                 </td>
-                <td class="window-controls">
-                    &mdash; &square; &times;
+
+                <!-- 2. INFORMAÇÕES DO APP -->
+                <td valign="middle">
+                    <span class="app-cat">NAVEGAÇÃO</span><br>
+                    <span class="app-title">Astro-Nav Pro</span>
+                    <div class="app-desc">Sistema de navegação estelar avançado e mapeamento orbital.</div>
+                </td>
+
+                <!-- 3. BOTÃO DE DOWNLOAD -->
+                <td width="130" align="center" valign="middle">
+                    <a href="link_do_app1.zip" class="btn-install">INSTALAR</a>
                 </td>
             </tr>
         </table>
+        <!-- FIM DO APP 1 -->
 
-        <!-- GRADE DE APLICATIVOS (LINHA 1) -->
-        <table class="app-grid" cellpadding="0" cellspacing="0" border="0">
+
+        <!-- ======================================================== -->
+        <!-- INÍCIO DO APP 2 -->
+        <!-- ======================================================== -->
+        <table class="app-card" cellSpacing="0" cellPadding="0">
             <tr>
-                <td class="category-title">UTILITIES</td>
-                <td class="category-title">GAMES</td>
-                <td class="category-title">CREATIVITY</td>
-            </tr>
-            <tr>
-                <!-- CARD 1 -->
-                <td class="app-card">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td class="app-icon-cell">
-                                <div class="app-icon">&#128680;</div>
-                            </td>
-                            <td>
-                                <div class="app-name">ASTRO-NAV PRO</div>
-                                <div class="app-cat">Navigation</div>
-                                <div class="app-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="app-desc">Futuristic spatial navigation and deep-space telemetry engine.</div>
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td><a href="apps/astro-nav.zip" class="btn-install">INSTALL</a></td>
-                            <td align="right" style="color: #00f0ff;">&#10515;</td>
-                        </tr>
-                    </table>
+                <!-- 1. LOGO DO APP -->
+                <td width="80" align="center" valign="middle">
+                    <img src="https://via.placeholder.com/64/ff0055/ffffff?text=MUSIC" class="app-logo" style="border-color: #ff0055;" alt="Logo">
                 </td>
 
-                <!-- CARD 2 -->
-                <td class="app-card">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td class="app-icon-cell">
-                                <div class="app-icon" style="background: linear-gradient(135deg, #701a75, #d946ef); border-color: #f0abfc;">&#127918;</div>
-                            </td>
-                            <td>
-                                <div class="app-name">SYNTH RUNNER</div>
-                                <div class="app-cat">Media &amp; Gaming</div>
-                                <div class="app-rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.2</div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="app-desc">High-speed neon runner game with interactive synthwave tracks.</div>
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td><a href="apps/synth-runner.zip" class="btn-install" style="color:#f0abfc; border-color:#f0abfc;">INSTALL</a></td>
-                            <td align="right" style="color: #f0abfc;">&#10515;</td>
-                        </tr>
-                    </table>
+                <!-- 2. INFORMAÇÕES DO APP -->
+                <td valign="middle">
+                    <span class="app-cat" style="color: #ff0055;">MULTIMÍDIA</span><br>
+                    <span class="app-title">Synthwave Music</span>
+                    <div class="app-desc">Reprodutor de música espacial com ondas sonoras personalizadas.</div>
                 </td>
 
-                <!-- CARD 3 -->
-                <td class="app-card">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td class="app-icon-cell">
-                                <div class="app-icon" style="background: linear-gradient(135deg, #854d0e, #eab308); border-color: #fef08a;">&#127912;</div>
-                            </td>
-                            <td>
-                                <div class="app-name">CYBER ART TOOL</div>
-                                <div class="app-cat">Creativity</div>
-                                <div class="app-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="app-desc">Holographic canvas editor for cybernetic textures and vector art.</div>
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td><a href="apps/cyber-art.zip" class="btn-install" style="color:#fef08a; border-color:#fef08a;">INSTALL</a></td>
-                            <td align="right" style="color: #fef08a;">&#10515;</td>
-                        </tr>
-                    </table>
+                <!-- 3. BOTÃO DE DOWNLOAD -->
+                <td width="130" align="center" valign="middle">
+                    <a href="link_do_app2.zip" class="btn-install" style="background-color: #ff0055; color: #ffffff;">INSTALAR</a>
                 </td>
             </tr>
         </table>
+        <!-- FIM DO APP 2 -->
 
-        <!-- GRADE DE APLICATIVOS (LINHA 2) -->
-        <table class="app-grid" cellpadding="0" cellspacing="0" border="0">
-            <tr>
-                <td class="category-title">EXPLORATION</td>
-                <td class="category-title">SOCIAL</td>
-                <td class="category-title">SECURITY</td>
-            </tr>
-            <tr>
-                <!-- CARD 4 -->
-                <td class="app-card">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td class="app-icon-cell">
-                                <div class="app-icon">&#128640;</div>
-                            </td>
-                            <td>
-                                <div class="app-name">VOID RUNNER X</div>
-                                <div class="app-cat">Exploration</div>
-                                <div class="app-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0</div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="app-desc">Atmospheric space travel simulation and sector mapping software.</div>
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td><a href="apps/void-runner.zip" class="btn-install">DOWNLOAD</a></td>
-                            <td align="right" style="color: #00f0ff;">&#10515;</td>
-                        </tr>
-                    </table>
-                </td>
-
-                <!-- CARD 5 -->
-                <td class="app-card">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td class="app-icon-cell">
-                                <div class="app-icon" style="background: linear-gradient(135deg, #065f46, #10b981); border-color: #6ee7b7;">&#127760;</div>
-                            </td>
-                            <td>
-                                <div class="app-name">GALACTIC NET</div>
-                                <div class="app-cat">Social Network</div>
-                                <div class="app-rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.6</div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="app-desc">Quantum-encrypted social hub for interstellar communication.</div>
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td><a href="apps/galactic-net.zip" class="btn-install" style="color:#6ee7b7; border-color:#6ee7b7;">INSTALL</a></td>
-                            <td align="right" style="color: #6ee7b7;">&#10515;</td>
-                        </tr>
-                    </table>
-                </td>
-
-                <!-- CARD 6 -->
-                <td class="app-card">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td class="app-icon-cell">
-                                <div class="app-icon" style="background: linear-gradient(135deg, #991b1b, #ef4444); border-color: #fca5a5;">&#128274;</div>
-                            </td>
-                            <td>
-                                <div class="app-name">AEGIS SHIELD</div>
-                                <div class="app-cat">Security</div>
-                                <div class="app-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="app-desc">Proactive node protection against unauthorized data interception.</div>
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td><a href="apps/aegis-shield.zip" class="btn-install" style="color:#fca5a5; border-color:#fca5a5;">INSTALL</a></td>
-                            <td align="right" style="color: #fca5a5;">&#10515;</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-
-        <!-- BARRA INFERIOR / DOCK -->
-        <table id="dock-table" cellpadding="0" cellspacing="0" border="0">
-            <tr>
-                <td width="30%" class="user-profile">
-                    &#128100; Profile: <strong>Commander Ava</strong>
-                </td>
-                <td width="40%" class="dock-icons">
-                    <a href="#store" class="dock-btn">&#128092;</a>
-                    <a href="#search" class="dock-btn">&#128065;</a>
-                    <a href="#library" class="dock-btn">&#128190;</a>
-                    <a href="#settings" class="dock-btn">&#9881;</a>
-                </td>
-                <td width="30%" align="right" style="font-size: 11px; color: #64748b;">
-                    System Status: <span style="color:#10b981;">ONLINE</span>
-                </td>
-            </tr>
-        </table>
 
     </div>
 
