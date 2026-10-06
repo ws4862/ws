@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Chat Net",
+    "version": "1.0",
+    "description": "Aplicativo de comunicação, coloque seu nome e entre",
+    "icon": "https://ws4862.github.io/ws/apps/chatnet/ico.png",
+    "wata": "https://ws4862.github.io/ws/apps/chatnet.wata"
+  }
+]
