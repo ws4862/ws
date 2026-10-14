@@ -3,15 +3,13 @@
     "name": "Chat Net",
     "version": "1.0",
     "description": "Aplicativo de comunicação, coloque seu nome e entre",
-    "icon": "https://ws4862.github.io/ws/apps/chatnet.jpg",
+    "icon": "https://ws4862.github.io/ws/apps/chatnet/chatnet.jpg",
     "wata": "https://ws4862.github.io/ws/apps/chatnet.wata"
-  }
-]
-[
+  },
   {
-    "name": "mesnsagem sobre a WS:",
-    "version": "isso nao é um app!",
-    "description": "estamos avisando que a WS agora tambem pode ser instalada em iphones e ipads agora, mas a WS do WOS! ainda sera a mesma, nao mudara",
+    "name": "Mensagem sobre a WS",
+    "version": "Informativo",
+    "description": "Estamos avisando que a WS agora também pode ser instalada em iPhones e iPads. A WS do WOS continuará a mesma, sem mudanças.",
     "icon": "naoapp",
     "wata": "naoapp"
   }
