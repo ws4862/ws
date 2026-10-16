@@ -12,5 +12,12 @@
     "description": "Estamos avisando que a WS agora também pode ser instalada em iPhones e iPads. A WS do WOS continuará a mesma, sem mudanças.",
     "icon": "https://downloadscdn6.magnific.com/53876/124/123865.jpg?filename=email-alert-popup-reminder-concept.jpg&token=exp=1792074432~hmac=5e8df1fde5875f8b6a85d5b127fb766b",
     "wata": "naoapp"
+  },
+  {
+    "name": "Calculadora",
+    "version": "1.0",
+    "description": "Aplicativo de calcular",
+    "icon": "https://ws4862.github.io/ws/apps/calc.png",
+    "wata": "https://ws4862.github.io/ws/apps/calc.wata"
   }
 ]
