@@ -20,4 +20,11 @@
     "icon": "https://ws4862.github.io/ws/apps/calc.png",
     "wata": "https://ws4862.github.io/ws/apps/calc.wata"
   }
+  {
+    "name": "Wikipedia",
+    "version": "1.0",
+    "description": "Aplicativo de pesquisa de dicionario (copia site wikipedia.org como base)",
+    "icon": "https://ws4862.github.io/ws/apps/wikipedia.png",
+    "wata": "https://ws4862.github.io/ws/apps/wikipedia.wata"
+  }
 ]
